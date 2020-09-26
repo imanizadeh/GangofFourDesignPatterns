@@ -2,14 +2,16 @@
 <div style="direction:rtl;">
 
   <h1> Gang of Four Design Patterns</h1>
-  <p>
+  <p style="direction: rtl;">
   در مهندسی نرم افزار، الگوی های طراحی راه حل های کلی و قابل استفاده مجدد برای مشکلاتی که معمولا در یک زمینه خاص طراحی نرم افزار وجود دارند می باشند.
   </p>
 
 
+<p style="direction: rtl;">
+در سال 1994 گروه چهار نفره به نام Gang of Four کتابی نوشتند به نام Design Patterns: Elements of Reusable Object-Oriented Software که در آن 23 الگوی طراحی یا همان Design Pattern معرفی کردند.
+</p>
 
 
-** در سال 1994 گروه چهار نفره به نام Gang of Four کتابی نوشتند به نام Design Patterns: Elements of Reusable Object-Oriented Software که در آن 23 الگوی طراحی یا همان Design Pattern معرفی کردند.
 
 ** Design  Pattern ها به سه دسته اصلی Creational ، Behavioral ، Structural تقسیم می شوند.
 
