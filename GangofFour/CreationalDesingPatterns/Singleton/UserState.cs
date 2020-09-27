@@ -4,6 +4,7 @@ using System.Text;
 
 namespace GangofFour.CreationalDesingPatterns.Singleton
 {
+    //از خاصیت sealed استفاده شده تا کسی نتواند از کلاس ارث بری کند
     public sealed class UserState
     {
         private static UserState _instance;
@@ -11,16 +12,17 @@ namespace GangofFour.CreationalDesingPatterns.Singleton
 
         private UserState() { }
 
-
         public static UserState GetSingleton()
         {
-
-            lock (_lock)
+            //این شرط باعث می شود اگر نمونه کلاس قبلا ایجاد شده است دیگر نخ ها بلاک نشوند
+            if (_instance == null)
             {
-                if (_instance is null)
-                    _instance = new UserState();
+                lock (_lock)
+                {
+                    if (_instance == null)
+                        _instance = new UserState();
+                }
             }
-
             return _instance;
         }
 
@@ -28,5 +30,10 @@ namespace GangofFour.CreationalDesingPatterns.Singleton
         public string LoginName { get; set; }
 
         public short Age { get; set; }
+
+        public string ShowInfo()
+        {
+            return $"{LoginName} {Age}";
+        }
     }
 }
